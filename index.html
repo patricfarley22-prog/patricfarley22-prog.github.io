@@ -669,6 +669,206 @@
       font-size: 0.8rem;
     }
 
+    /* ===== STICKY CTA BUTTON ===== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 1000;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+      color: var(--bg);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3), 0 0 40px rgba(0, 240, 255, 0.1);
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      animation: pulse-glow 2s infinite;
+    }
+    .sticky-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(0, 240, 255, 0.4), 0 0 60px rgba(0, 240, 255, 0.2);
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3); }
+      50% { box-shadow: 0 4px 30px rgba(0, 240, 255, 0.5); }
+    }
+
+    /* ===== TRUST BADGES ===== */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background: var(--bg-elevated);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .badge-icon {
+      font-size: 1.5rem;
+    }
+    .badge-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .badge-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== PROCESS SECTION ===== */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .process-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .process-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'JetBrains Mono';
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .process-icon {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+    }
+    .process-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .process-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .process-time {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono';
+    }
+
+    /* ===== STATS ROW ===== */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'JetBrains Mono';
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .faq-item:hover {
+      border-color: var(--border-light);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .faq-question:hover {
+      background: var(--bg-hover);
+    }
+    .faq-toggle {
+      font-size: 1.5rem;
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0 1.5rem;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+    .faq-answer p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      padding-bottom: 1.25rem;
+    }
+
     /* ===== MODAL ===== */
     .modal {
       display: none;
@@ -786,6 +986,21 @@
       
       /* Container padding */
       .container { padding-left: 1rem; padding-right: 1rem; }
+      
+      /* Trust badges */
+      .trust-badges { flex-wrap: wrap; gap: 1rem; }
+      .badge-item { flex: 1 1 calc(50% - 0.5rem); }
+      
+      /* Process */
+      .process-grid { grid-template-columns: 1fr !important; }
+      .process-card { padding: 1.5rem; }
+      
+      /* Stats */
+      .stats-row { flex-direction: column; gap: 1.5rem; }
+      
+      /* FAQ */
+      .faq-question { padding: 1rem; font-size: 0.95rem; }
+      .faq-answer { padding: 0 1rem 1rem; }
     }
     
     /* Extra small phones */
@@ -853,6 +1068,45 @@
       </div>
     </div>
   </section>
+
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="badge-item">
+      <div class="badge-icon">⚡</div>
+      <div class="badge-text">
+        <div class="badge-label">5 AI Agents</div>
+        <div class="badge-desc">Running 24/7</div>
+      </div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">💰</div>
+      <div class="badge-text">
+        <div class="badge-label">$1,080/yr Saved</div>
+        <div class="badge-desc">On subscriptions</div>
+      </div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">🔒</div>
+      <div class="badge-text">
+        <div class="badge-label">100% Private</div>
+        <div class="badge-desc">Your data stays local</div>
+      </div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">🛠️</div>
+      <div class="badge-text">
+        <div class="badge-label">Custom Built</div>
+        <div class="badge-desc">For your workflow</div>
+      </div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">⭐</div>
+      <div class="badge-text">
+        <div class="badge-label">Satisfaction Guaranteed</div>
+        <div class="badge-desc">30-day support</div>
+      </div>
+    </div>
+  </div>
 
   <!-- The Math -->
   <section id="math" style="background: var(--bg-elevated); border-top: 1px solid var(--border); padding: 4rem 2rem;">
@@ -1033,6 +1287,68 @@
     </div>
   </section>
 
+  <!-- How It Works -->
+  <section id="process" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <div class="section-label">// The Process</div>
+        <h2 class="section-title">From Zero to AI in 3 Steps</h2>
+        <p class="section-desc" style="margin: 0 auto;">No tech knowledge required. I handle everything.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">01</div>
+          <div class="process-icon">📞</div>
+          <h3>Free Discovery Call</h3>
+          <p>30-minute call. I learn what you need, what frustrates you, and what success looks like. No pressure, no sales pitch.</p>
+          <div class="process-time">~30 min</div>
+        </div>
+        <div class="process-card">
+          <div class="process-number">02</div>
+          <div class="process-icon">⚙️</div>
+          <h3>I Build Your System</h3>
+          <p>I install everything on your machine. AI agents, automations, integrations. You watch or go live your life.</p>
+          <div class="process-time">1-3 days</div>
+        </div>
+        <div class="process-card">
+          <div class="process-number">03</div>
+          <div class="process-icon">🚀</div>
+          <h3>Handoff & Training</h3>
+          <p>I show you how to use it, tweak it, and make it yours. Plus 30 days of support for any questions.</p>
+          <div class="process-time">2 hour call</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section id="social-proof" style="background: var(--bg-elevated); padding: 4rem 2rem;">
+    <div class="container" style="text-align: center;">
+      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+        <div class="section-label">// Results</div>
+        <h2 class="section-title">Built for Myself First. Proven in Production.</h2>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number">$1,080</div>
+          <div class="stat-label">Saved per year</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5</div>
+          <div class="stat-label">AI Agents Running</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">$0</div>
+          <div class="stat-label">Monthly AI Cost</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Automated Uptime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing Tiers -->
   <section id="offer" style="background: var(--bg-elevated);">
     <div class="container">
@@ -1122,6 +1438,63 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+        <div class="section-label">// FAQ</div>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do I need to know how to code?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>No. I handle all the technical setup. You just tell me what you want automated and I build it. I also include training so you can make small changes yourself if you want.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What if I don't have a powerful computer?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>No problem. I use Ollama Pro Cloud ($20/month) which handles the heavy AI processing in the cloud. Your local machine just runs the automation scripts and interface. Any modern laptop works.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is my data really private?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Everything runs on your machine. Your data never leaves your computer unless you explicitly choose cloud features. No third-party AI companies see your information. You're in full control.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What happens after the 30-day support?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can email me anytime with questions. For ongoing changes and new features, I offer monthly plans ($89-$149/mo) that include weekly optimization and priority support. Or you can reach out for one-off updates at my hourly rate.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does setup take?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Most setups are done in 1-3 days. Complex systems with multiple integrations might take up to a week. I'll give you a clear timeline during our discovery call.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Preview -->
   <section id="blog">
     <div class="container">
@@ -1200,6 +1573,11 @@
     </div>
   </footer>
 
+  <!-- Sticky CTA -->
+  <a href="#contact" class="sticky-cta" onclick="gtag('event', 'click', {event_category: 'cta', event_label: 'sticky_floating'})">
+    📞 Get Free Audit
+  </a>
+
   <!-- Success Modal -->
   <div class="modal" id="successModal">
     <div class="modal-content">
@@ -1231,6 +1609,22 @@
         closeMobileMenu();
       }
     });
+
+    // ===== FAQ TOGGLE =====
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Toggle current
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    }
 
     // ===== LIVE SOL PRICE =====
     async function fetchSOLPrice() {
