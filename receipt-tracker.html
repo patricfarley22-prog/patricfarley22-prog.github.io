@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Receipt Tracker - Stop Losing Money, Save Hours</title>
+  <meta name="description" content="Snap a photo of any receipt. AI extracts everything automatically. Tax-ready. No manual entry. $39 one-time. Never lose a deduction again.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-brand {
+      color: #a78bfa;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-brand:hover {
+      color: #c4b5fd;
+    }
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(139, 92, 246, 0.15);
+      color: #c4b5fd;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(59,130,246,0.1) 100%);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .price {
+      font-size: 48px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+    }
+    .price span {
+      font-size: 18px;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      margin: 20px 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(139,92,246,0.3);
+    }
+    .cta-text {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .cta-text a {
+      color: #c4b5fd;
+      text-decoration: none;
+    }
+    .cta-text a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 60px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .feature {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .feature h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .feature p {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .step {
+      text-align: center;
+    }
+    .step-num {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: rgba(139,92,246,0.2);
+      color: #c4b5fd;
+      border-radius: 50%;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .step h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .step p {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .comparison {
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+    .comparison table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .comparison th {
+      text-align: left;
+      padding: 12px;
+      color: #94a3b8;
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .comparison td {
+      padding: 16px 12px;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .check {
+      color: #34d399;
+      font-weight: 700;
+    }
+    .x {
+      color: #f87171;
+    }
+    .testimonial {
+      background: rgba(139,92,246,0.05);
+      border-left: 3px solid #8b5cf6;
+      padding: 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 32px 0;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 12px;
+      color: #c4b5fd;
+    }
+    .faq-item {
+      margin-bottom: 24px;
+    }
+    .faq-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: #94a3b8;
+      padding-left: 20px;
+      border-left: 2px solid rgba(139,92,246,0.3);
+    }
+    .footer-cta {
+      text-align: center;
+      padding: 60px 0;
+    }
+    .guarantee {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(52,211,153,0.1);
+      color: #34d399;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 16px 0;
+    }
+    .contact-strip {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .contact-strip a {
+      color: #c4b5fd;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-strip a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #64748b;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover {
+      color: #c4b5fd;
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0; }
+      .price { font-size: 36px; }
+      .cta-button { padding: 14px 28px; font-size: 16px; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-brand">← Back to PatricFarley.com</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <div class="badge">No Monthly Fees • $39 One-Time</div>
+      <h1>Stop Losing Receipts.<br>Stop Losing Money.</h1>
+      <p class="hero-subtitle">
+        Snap a photo. AI extracts store name, items, prices, taxes — everything. 
+        Tax-ready reports in one click. No more shoeboxes of paper.
+      </p>
+      
+      <div class="cta-box">
+        <p class="price">$39 <span>one-time</span></p>
+        <p style="color: #94a3b8; font-size: 14px; margin: 8px 0;">No subscriptions. No limits. Yours forever.</p>
+        <a href="tel:+14699616002" class="cta-button">Call or Text to Get Started</a>
+        <div class="contact-strip">
+          <a href="tel:+14699616002">📱 (469) 961-6002</a>
+          <a href="sms:+14699616002">💬 Text Me</a>
+        </div>
+        <p class="cta-text">I'll set it up on your computer in 30 minutes. <a href="#how">See how it works ↓</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>📸 Snap → 🧠 AI Reads → 📊 Done</h2>
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Take a Photo</h3>
+          <p>Snap any receipt with your phone. Crumpled, faded, doesn't matter.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>AI Extracts Everything</h3>
+          <p>Store name, address, date, items, prices, tax, total — auto-magically.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>See Your Spending</h3>
+          <p>Dashboard shows where your money goes. Monthly trends. Top stores. All clear.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Tax-Ready Export</h3>
+          <p>Export to CSV anytime. Give your accountant clean data. Stop overpaying taxes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>⚡ What You Get</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">🧾</span>
+          <h3>AI Receipt Reading</h3>
+          <p>OCR + AI extracts every detail. Even messy handwriting and faded ink.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">📊</span>
+          <h3>Spending Dashboard</h3>
+          <p>See monthly trends, category breakdown, top stores. Know where money goes.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">📁</span>
+          <h3>Tax-Ready CSV Export</h3>
+          <p>One click export for your accountant. Organized by date, store, category.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🏪</span>
+          <h3>Multi-Store Tracking</h3>
+          <p>Works for any business. Track across locations, vendors, projects.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔒</span>
+          <h3>Your Computer, Your Data</h3>
+          <p>Nothing goes to the cloud. All data stays on YOUR machine. Private. Secure.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🎯</span>
+          <h3>Never Miss a Deduction</h3>
+          <p>Every receipt tracked = every deduction claimed. Stop leaving money on the table.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>💰 This vs. What You're Doing Now</h2>
+      <div class="comparison">
+        <table>
+          <tr>
+            <th></th>
+            <th>Shoebox of Receipts</th>
+            <th>Spreadsheet Manually</th>
+            <th style="color: #c4b5fd;">AI Receipt Tracker</th>
+          </tr>
+          <tr>
+            <td>Time per receipt</td>
+            <td class="x">∞ (can't find them)</td>
+            <td class="x">5-10 minutes</td>
+            <td class="check">30 seconds</td>
+          </tr>
+          <tr>
+            <td>Tax deductions found</td>
+            <td class="x">Maybe 60%</td>
+            <td class="x">70% if you're organized</td>
+            <td class="check">100% — every receipt</td>
+          </tr>
+          <tr>
+            <td>Monthly cost</td>
+            <td class="check">$0</td>
+            <td class="check">$0</td>
+            <td class="check">$0 (one-time $39)</td>
+          </tr>
+            <td>Accountant's reaction</td>
+            <td class="x">😤 "Where's the rest?"</td>
+            <td class="x">😐 "Better than nothing"</td>
+            <td class="check">😍 "Perfect, thank you"</td>
+          </tr>
+          <tr>
+            <td>Year-end stress</td>
+            <td class="x">High</td>
+            <td class="x">Medium</td>
+            <td class="check">None — always organized</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>❓ Questions</h2>
+      <div class="faq-item">
+        <h3>Is this really $39 one-time?</h3>
+        <p>Yes. No subscriptions. No hidden fees. Pay once, use forever. Updates included.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to be tech-savvy?</h3>
+        <p>Nope. I set it up on your computer for you. Takes 30 minutes. Then you just snap photos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I have a Mac?</h3>
+        <p>Works on both Windows and Mac. I install everything, you just use it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I export for my accountant?</h3>
+        <p>Yes — one-click CSV export with all data organized by date, store, and category.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my data safe?</h3>
+        <p>100% local. Nothing uploads to cloud. Your receipts stay on YOUR computer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-cta">
+    <div class="container">
+      <h2 style="margin-bottom: 20px;">Ready to Stop Losing Money?</h2>
+      <p style="color: #94a3b8; margin-bottom: 24px;">
+        $39 one-time. Set up in 30 minutes. Start tracking today.
+      </p>
+      <div class="guarantee">
+        ✅ 30-Day Money-Back Guarantee
+      </div>
+      <div style="margin: 24px 0;">
+        <a href="tel:+14699616002" class="cta-button" style="font-size: 20px; padding: 18px 48px;">
+          Call or Text to Get Started
+        </a>
+      </div>
+      <div class="contact-strip">
+        <a href="tel:+14699616002">📱 (469) 961-6002</a>
+        <a href="sms:+14699616002">💬 Text Me</a>
+      </div>
+      <p style="color: #64748b; font-size: 12px; margin-top: 16px;">
+        Patric Farley • Grapevine, TX • Local setup, personal support
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Patric Farley • <a href="index.html">Main Site</a> • Built with 💜 in Texas</p>
+    </div>
+  </footer>
+
+</body>
+</html>
