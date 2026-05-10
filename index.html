@@ -2,1708 +2,354 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <title>Patric Farley - I Build AI Systems That Run 24/7 While You Sleep</title>
-  <meta name="description" content="I set up AI automation systems on your computer. No subscriptions. No cloud lock-in. You own everything. $500 one-time setup.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Patric Farley - AI Systems That Actually Work">
-  <meta property="og:description" content="24/7 AI automation on YOUR computer. No subscriptions. $500 one-time.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://patricfarley.com">
-
-  <!-- Google Analytics (replace G-XXXXXXXXXX) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cortex Receipt Tracker — AI-Powered Expense Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <style>
     :root {
-      /* Premium AI Cortex Palette */
-      --bg: #050A14;
-      --bg-elevated: #0A1628;
-      --bg-card: #0D1B2A;
-      --bg-hover: #111D2E;
-      --border: #1A2C3D;
-      --border-light: #223344;
-      --text: #E8F4FF;
-      --text-secondary: #7A8BA3;
-      --text-muted: #4A5D73;
-      --accent: #00F0FF;
-      --accent-dim: rgba(0, 240, 255, 0.1);
-      --accent-glow: rgba(0, 240, 255, 0.4);
-      --accent-secondary: #7B2DFF;
-      --accent-tertiary: #FF2D7B;
-      --danger: #FF2D7B;
-      
-      /* Glow effects */
-      --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.3);
-      --glow-purple: 0 0 30px rgba(123, 45, 255, 0.25);
-      --glow-magenta: 0 0 15px rgba(255, 45, 123, 0.2);
+      --bg: #050505;
+      --bg-card: #111111;
+      --border: #1a1a1a;
+      --text: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --text-muted: #555555;
+      --accent: #00d4aa;
+      --accent-glow: rgba(0, 212, 170, 0.4);
+      --danger: #ff4757;
+      --warning: #ffa502;
+      --success: #2ed573;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ===== PREMIUM AI CORTEX BACKGROUND SYSTEM ===== */
-    body {
-      background: var(--bg);
-      position: relative;
+      line-height: 1.5;
       overflow-x: hidden;
     }
-
-    /* Layer 1: Neural network grid - large flowing lines */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: 
-        /* Diagonal flowing lines - circuit board aesthetic */
-        repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 80px,
-          rgba(0, 240, 255, 0.015) 80px,
-          rgba(0, 240, 255, 0.015) 81px
-        ),
-        repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 120px,
-          rgba(123, 45, 255, 0.012) 120px,
-          rgba(123, 45, 255, 0.012) 121px
-        );
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Layer 2: Neural node dots - scattered connection points */
-    .neural-nodes {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 2;
-      background-image: 
-        /* Cyan nodes */
-        radial-gradient(circle at 15% 25%, rgba(0, 240, 255, 0.08) 0px, transparent 2px),
-        radial-gradient(circle at 45% 15%, rgba(0, 240, 255, 0.06) 0px, transparent 1.5px),
-        radial-gradient(circle at 75% 35%, rgba(0, 240, 255, 0.05) 0px, transparent 2px),
-        radial-gradient(circle at 25% 65%, rgba(0, 240, 255, 0.06) 0px, transparent 1.5px),
-        radial-gradient(circle at 65% 75%, rgba(0, 240, 255, 0.07) 0px, transparent 2px),
-        radial-gradient(circle at 85% 55%, rgba(0, 240, 255, 0.05) 0px, transparent 1.5px),
-        /* Purple nodes */
-        radial-gradient(circle at 35% 45%, rgba(123, 45, 255, 0.07) 0px, transparent 2px),
-        radial-gradient(circle at 55% 25%, rgba(123, 45, 255, 0.05) 0px, transparent 1.5px),
-        radial-gradient(circle at 85% 15%, rgba(123, 45, 255, 0.06) 0px, transparent 2px),
-        radial-gradient(circle at 10% 85%, rgba(123, 45, 255, 0.05) 0px, transparent 1.5px),
-        radial-gradient(circle at 50% 90%, rgba(123, 45, 255, 0.07) 0px, transparent 2px),
-        radial-gradient(circle at 90% 85%, rgba(123, 45, 255, 0.06) 0px, transparent 1.5px),
-        /* Magenta accent nodes */
-        radial-gradient(circle at 30% 10%, rgba(255, 45, 123, 0.04) 0px, transparent 2px),
-        radial-gradient(circle at 70% 60%, rgba(255, 45, 123, 0.05) 0px, transparent 1.5px);
-    }
-
-    /* Layer 3: Glowing orbs / ambient light fields */
-    .ambient-glow {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 3;
-      background:
-        /* Large cyan glow - top left */
-        radial-gradient(ellipse 600px 400px at 10% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 70%),
-        /* Large purple glow - bottom right */
-        radial-gradient(ellipse 500px 500px at 85% 80%, rgba(123, 45, 255, 0.07) 0%, transparent 70%),
-        /* Subtle magenta glow - center right */
-        radial-gradient(ellipse 400px 300px at 70% 40%, rgba(255, 45, 123, 0.04) 0%, transparent 70%),
-        /* Center soft glow */
-        radial-gradient(ellipse 800px 600px at 50% 50%, rgba(0, 240, 255, 0.02) 0%, transparent 60%);
-      filter: blur(60px);
-    }
-
-    /* Layer 4: Circuit trace lines - connecting paths */
-    .circuit-traces {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 4;
-      opacity: 0.4;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cpath d='M50 50 L50 150 L150 150 L150 250 L250 250' stroke='rgba(0,240,255,0.08)' stroke-width='0.5' fill='none'/%3E%3Cpath d='M350 50 L350 100 L300 100 L300 200 L350 200 L350 350' stroke='rgba(123,45,255,0.06)' stroke-width='0.5' fill='none'/%3E%3Cpath d='M100 350 L100 300 L200 300 L200 200 L300 200' stroke='rgba(0,240,255,0.05)' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2' fill='rgba(0,240,255,0.15)'/%3E%3Ccircle cx='150' cy='250' r='2' fill='rgba(0,240,255,0.1)'/%3E%3Ccircle cx='250' cy='250' r='2' fill='rgba(0,240,255,0.1)'/%3E%3Ccircle cx='350' cy='350' r='2' fill='rgba(123,45,255,0.1)'/%3E%3Ccircle cx='100' cy='350' r='2' fill='rgba(123,45,255,0.08)'/%3E%3Ccircle cx='300' cy='200' r='2' fill='rgba(255,45,123,0.08)'/%3E%3C/svg%3E");
-      background-size: 400px 400px;
-    }
-
-    /* Layer 5: Fine noise texture for depth */
-    .noise-texture {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 5;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-      opacity: 0.025;
-    }
-
-    /* Animated scanning line effect */
-    .scan-line {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent);
-      animation: scanMove 8s linear infinite;
-      pointer-events: none;
-      z-index: 6;
-      opacity: 0.3;
-    }
-    @keyframes scanMove {
-      0% { transform: translateY(-100vh); }
-      100% { transform: translateY(100vh); }
-    }
-
-    /* Floating particles */
-    .particles {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 7;
-      overflow: hidden;
-    }
-    .particle {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: rgba(0, 240, 255, 0.4);
-      border-radius: 50%;
-      animation: floatUp linear infinite;
-    }
-    .particle:nth-child(1) { left: 10%; animation-duration: 15s; animation-delay: 0s; }
-    .particle:nth-child(2) { left: 25%; animation-duration: 18s; animation-delay: 2s; background: rgba(123, 45, 255, 0.3); }
-    .particle:nth-child(3) { left: 40%; animation-duration: 12s; animation-delay: 5s; }
-    .particle:nth-child(4) { left: 55%; animation-duration: 20s; animation-delay: 1s; background: rgba(255, 45, 123, 0.25); }
-    .particle:nth-child(5) { left: 70%; animation-duration: 16s; animation-delay: 7s; }
-    .particle:nth-child(6) { left: 85%; animation-duration: 14s; animation-delay: 4s; background: rgba(123, 45, 255, 0.3); }
-    .particle:nth-child(7) { left: 15%; animation-duration: 22s; animation-delay: 3s; }
-    .particle:nth-child(8) { left: 60%; animation-duration: 17s; animation-delay: 6s; background: rgba(255, 45, 123, 0.25); }
-
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100px) scale(1); opacity: 0; }
-    }
-
-    /* ===== NAV ===== */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1rem 2rem;
-      background: rgba(10, 10, 10, 0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo { font-family: 'JetBrains Mono'; font-size: 1.1rem; font-weight: 500; }
-    .nav-logo span { color: var(--accent); text-shadow: 0 0 20px rgba(0, 240, 255, 0.5); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
-
-    /* Mobile menu button */
-    .mobile-menu-btn {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-    .mobile-menu-btn span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      transition: all 0.3s;
-    }
-    .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
-    .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-    /* ===== HERO ===== */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 8rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 50%, rgba(0, 240, 255, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 50%, rgba(123, 45, 255, 0.06) 0%, transparent 40%);
-      animation: gradientMove 20s ease-in-out infinite;
-      z-index: 0;
-    }
-    @keyframes gradientMove {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-2%, 2%) rotate(2deg); }
-    }
-    .hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-      position: relative;
-      z-index: 1;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0,212,170,0.08) 0%, transparent 50%);
     }
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      background: var(--accent-dim);
-      border: 1px solid rgba(0, 240, 255, 0.3);
-      border-radius: 4px;
-      font-size: 0.75rem;
+      background: rgba(0,212,170,0.1);
+      border: 1px solid rgba(0,212,170,0.3);
       color: var(--accent);
-      margin-bottom: 2rem;
-      font-family: 'JetBrains Mono';
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.03em;
-    }
-    .hero h1 em { color: var(--accent); font-style: normal; text-shadow: 0 0 40px rgba(0, 240, 255, 0.3); }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-      max-width: 550px;
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--bg);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3), 0 0 60px rgba(0, 240, 255, 0.1);
-    }
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border-light);
-    }
-    .btn-secondary:hover { border-color: var(--text-secondary); background: var(--bg-card); }
-
-    /* ===== LIVE STATS STRIP ===== */
-    .live-stats {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 2rem;
-      background: rgba(10, 22, 40, 0.6);
-      backdrop-filter: blur(10px);
-      position: relative;
-      z-index: 10;
-    }
-    .live-stats-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
-    .live-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .live-stat-icon {
-      width: 36px; height: 36px;
-      background: var(--accent-dim);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-    }
-    .live-stat-value {
-      font-family: 'JetBrains Mono';
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-    .live-stat-label {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== SECTIONS ===== */
-    section { padding: 5rem 2rem; }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .section-header { margin-bottom: 3rem; }
-    .section-label {
-      font-family: 'JetBrains Mono';
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .section-desc {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    /* ===== LEAD MAGNET ===== */
-    .lead-magnet {
-      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(0, 240, 255, 0.05) 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .lead-magnet h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .lead-magnet p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-    .email-form {
-      display: flex;
-      gap: 0.75rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .email-form input {
-      flex: 1;
-      padding: 0.9rem 1rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 0.9rem;
-    }
-    .email-form input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-    .email-form input::placeholder { color: var(--text-muted); }
-
-    /* ===== CASE STUDIES ===== */
-    .case-studies-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .case-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      transition: all 0.2s;
-    }
-    .case-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -20px rgba(0, 240, 255, 0.2);
-    }
-    .case-tag {
-      display: inline-block;
-      padding: 0.25rem 0.6rem;
-      background: var(--accent-dim);
-      color: var(--accent);
-      font-size: 0.7rem;
-      font-family: 'JetBrains Mono';
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-    .case-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .case-card p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .case-metric {
-      font-family: 'JetBrains Mono';
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .case-metric-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    /* ===== OFFER ===== */
-    .offer-card {
-      background: var(--bg-card);
-      border: 2px solid var(--accent);
-      border-radius: 16px;
-      padding: 3rem;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-    }
-    .offer-card::before {
-      content: 'BEST VALUE';
-      position: absolute;
-      top: -1px;
-      right: -1px;
-      padding: 0.4rem 1rem;
-      background: var(--accent);
-      color: var(--bg);
-      font-size: 0.65rem;
-      font-weight: 700;
-      border-bottom-left-radius: 10px;
-      letter-spacing: 0.5px;
-    }
-    .offer-price {
-      font-family: 'JetBrains Mono';
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin: 1rem 0;
-    }
-    .offer-features {
-      list-style: none;
-      text-align: left;
-      max-width: 400px;
-      margin: 2rem auto;
-    }
-    .offer-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border-light);
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-    .offer-features li::before {
-      content: '✓';
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact-form {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .form-group { margin-bottom: 1.5rem; }
-    .form-group label {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 0.95rem;
-      font-family: 'Inter', sans-serif;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-    .form-group textarea { min-height: 120px; resize: vertical; }
-
-    /* ===== BLOG PREVIEW ===== */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-    .blog-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.2s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .blog-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-    .blog-date {
-      font-family: 'JetBrains Mono';
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-    .blog-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-    .blog-card p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-    .blog-arrow {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      display: inline-block;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 3rem 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    .footer-social a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .footer-social a:hover { color: var(--accent); }
-    .footer-copy {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    /* ===== STICKY CTA BUTTON ===== */
-    .sticky-cta {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 1000;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
-      color: var(--bg);
-      padding: 1rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3), 0 0 40px rgba(0, 240, 255, 0.1);
-      transition: all 0.3s;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      animation: pulse-glow 2s infinite;
-    }
-    .sticky-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 30px rgba(0, 240, 255, 0.4), 0 0 60px rgba(0, 240, 255, 0.2);
-    }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3); }
-      50% { box-shadow: 0 4px 30px rgba(0, 240, 255, 0.5); }
-    }
-
-    /* ===== TRUST BADGES ===== */
-    .trust-badges {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem;
-      background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-    .badge-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 1rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
-    .badge-icon {
-      font-size: 1.5rem;
-    }
-    .badge-label {
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
       font-size: 0.85rem;
       font-weight: 600;
-      color: var(--text);
+      margin-bottom: 1.5rem;
     }
-    .badge-desc {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
+    .hero-badge .pulse { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; background: linear-gradient(135deg, #fff, var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem; }
+    .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 0.75rem 1.5rem; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #0088aa); color: #000; box-shadow: 0 4px 20px rgba(0,212,170,0.3); }
+    .btn-secondary { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); }
+    .price-tag { margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); }
+    .price-tag strong { color: var(--accent); font-size: 1.1rem; }
 
-    /* ===== PROCESS SECTION ===== */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .process-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.5rem;
-      text-align: center;
-      position: relative;
-      transition: all 0.3s;
-    }
-    .process-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-    .process-number {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent);
-      color: var(--bg);
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-family: 'JetBrains Mono';
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-    .process-icon {
-      font-size: 2.5rem;
-      margin: 1rem 0;
-    }
-    .process-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      color: var(--text);
-    }
-    .process-card p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .process-time {
-      display: inline-block;
-      padding: 0.35rem 0.75rem;
-      background: var(--accent-dim);
-      color: var(--accent);
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-family: 'JetBrains Mono';
-    }
+    .demo-section { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .demo-header { text-align: center; margin-bottom: 1.5rem; }
+    .demo-header h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .demo-header p { color: var(--text-secondary); font-size: 0.9rem; }
 
-    /* ===== STATS ROW ===== */
-    .stats-row {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    .stat-item {
-      text-align: center;
-    }
-    .stat-number {
-      font-family: 'JetBrains Mono';
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-    }
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-top: 0.5rem;
-    }
+    .dashboard-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 2rem; }
+    .preview-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .preview-header .logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 0.95rem; }
+    .live-badge { display: flex; align-items: center; gap: 0.5rem; background: rgba(46,213,115,0.1); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+    .live-badge .dot { width: 6px; height: 6px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
 
-    /* ===== FAQ ===== */
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s;
-    }
-    .faq-item:hover {
-      border-color: var(--border-light);
-    }
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 1.5rem;
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--text);
-      transition: all 0.2s;
-    }
-    .faq-question:hover {
-      background: var(--bg-hover);
-    }
-    .faq-toggle {
-      font-size: 1.5rem;
-      color: var(--accent);
-      transition: transform 0.3s;
-    }
-    .faq-item.active .faq-toggle {
-      transform: rotate(45deg);
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      padding: 0 1.5rem;
-    }
-    .faq-item.active .faq-answer {
-      max-height: 200px;
-    }
-    .faq-answer p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.7;
-      padding-bottom: 1.25rem;
-    }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; padding: 1.25rem; }
+    .stat-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+    .stat-box .label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.35rem; }
+    .stat-box .value { font-size: 1.5rem; font-weight: 800; }
+    .stat-box .change { font-size: 0.75rem; margin-top: 0.25rem; color: var(--success); }
 
-    /* ===== MODAL ===== */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-    }
-    .modal.show { display: flex; }
-    .modal-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-    }
-    .modal-content h3 { margin-bottom: 1rem; }
-    .modal-content p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 0 1.25rem 1.25rem; }
+    .chart-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; height: 260px; min-height: 260px; max-height: 260px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+    .chart-box .title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.75rem; flex-shrink: 0; }
+    .chart-box canvas { flex: 1; min-height: 0 !important; width: 100% !important; height: auto !important; max-height: 200px; }
 
-    /* ===== ANIMATIONS ===== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .receipts-section { padding: 0 1.25rem 1.25rem; }
+    .receipts-section h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .receipts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+    .receipt-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .receipt-body { padding: 0.875rem; }
+    .receipt-store { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .receipt-meta { display: flex; gap: 0.4rem; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .receipt-amount { font-size: 1rem; font-weight: 800; color: var(--accent); }
+    .confidence-bar { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+    .confidence-bar .bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .confidence-bar .bar .fill { height: 100%; border-radius: 2px; }
+    .confidence-bar .label { font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; }
 
-    /* ===== MOBILE ===== */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .feature { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center; }
+    .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .feature h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .feature p { color: var(--text-secondary); font-size: 0.85rem; }
+
+    .pricing { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; text-align: center; margin: 2rem 0; }
+    .pricing h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .pricing .price { font-size: 3rem; font-weight: 800; color: var(--accent); margin: 1rem 0; }
+    .pricing .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+    .pricing-features { list-style: none; max-width: 400px; margin: 1.5rem auto; text-align: left; }
+    .pricing-features li { display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .pricing-features li::before { content: '✓'; color: var(--success); font-weight: 700; }
+
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+
     @media (max-width: 768px) {
-      /* Nav mobile */
-      .mobile-menu-btn { display: flex; }
-      .nav-links { 
-        display: none; 
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(5, 10, 20, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 0;
-        border-bottom: 1px solid var(--border);
-        z-index: 99;
-      }
-      .nav-links.active { display: flex; }
-      .nav-links li { border-bottom: 1px solid var(--border); }
-      .nav-links li:last-child { border-bottom: none; }
-      .nav-links a { 
-        display: block; 
-        padding: 1rem 0; 
-        font-size: 1rem; 
-      }
-      nav { padding: 0.75rem 1rem; }
-      
-      /* Hero */
-      .hero { min-height: auto; padding: 6rem 1rem 3rem; }
-      .hero h1 { font-size: 2rem; line-height: 1.2; }
-      .hero-subtitle { font-size: 1rem; }
-      .hero-cta { flex-direction: column; gap: 0.75rem; }
-      .hero-cta .btn { width: 100%; justify-content: center; }
-      
-      /* Stats */
-      .live-stats { padding: 1rem; }
-      .live-stats-container { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .live-stat-value { font-size: 0.95rem; }
-      
-      /* Sections */
-      section { padding: 3rem 1rem; }
-      .section-title { font-size: 1.5rem; }
-      .section-desc { font-size: 0.95rem; }
-      
-      /* Math cards */
-      #math .container > div[style*="grid"] { grid-template-columns: 1fr !important; }
-      
-      /* Problem/Solution */
-      #about .container > div:last-child { padding: 1.5rem; }
-      #about .container > div:last-child > div:last-child { grid-template-columns: 1fr !important; gap: 1.5rem; }
-      
-      /* Lead magnet */
-      .email-form { flex-direction: column; }
-      .lead-magnet { padding: 2rem 1rem; }
-      
-      /* Case studies */
-      .case-studies-grid { grid-template-columns: 1fr; }
-      .case-card { padding: 1.5rem; }
-      
-      /* Pricing */
-      .services-grid { grid-template-columns: 1fr !important; }
-      .service-card { padding: 1.5rem; }
-      .service-price { font-size: 2.5rem; }
-      
-      /* Blog */
-      .blog-grid { grid-template-columns: 1fr; }
-      
-      /* Contact */
-      .contact-form { padding: 0 0.5rem; }
-      
-      /* Footer */
-      .footer-social { flex-direction: column; gap: 1rem; }
-      
-      /* Background layers - reduce on mobile for performance */
-      .circuit-traces { opacity: 0.3; }
-      .neural-nodes { opacity: 0.7; }
-      
-      /* Buttons */
-      .btn { padding: 0.875rem 1.5rem; font-size: 0.9rem; }
-      
-      /* Container padding */
-      .container { padding-left: 1rem; padding-right: 1rem; }
-      
-      /* Trust badges */
-      .trust-badges { flex-wrap: wrap; gap: 1rem; }
-      .badge-item { flex: 1 1 calc(50% - 0.5rem); }
-      
-      /* Process */
-      .process-grid { grid-template-columns: 1fr !important; }
-      .process-card { padding: 1.5rem; }
-      
-      /* Stats */
-      .stats-row { flex-direction: column; gap: 1.5rem; }
-      
-      /* FAQ */
-      .faq-question { padding: 1rem; font-size: 0.95rem; }
-      .faq-answer { padding: 0 1rem 1rem; }
-    }
-    
-    /* Extra small phones */
-    @media (max-width: 480px) {
       .hero h1 { font-size: 1.75rem; }
-      .section-title { font-size: 1.3rem; }
-      .live-stats-container { grid-template-columns: 1fr 1fr; }
-      .service-price { font-size: 2rem; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .charts-row { grid-template-columns: 1fr; }
+      .chart-box { height: 220px; min-height: 220px; max-height: 220px; }
+      .features { grid-template-columns: 1fr; }
+      .receipts-grid { grid-template-columns: 1fr; }
     }
-    
-    /* Touch-friendly tap targets */
-    @media (hover: none) and (pointer: coarse) {
-      .nav-links a, .btn, .blog-card { min-height: 44px; }
-      .btn { padding: 1rem 1.5rem; }
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Background layers -->
-  <div class="neural-nodes"></div>
-  <div class="ambient-glow"></div>
-  <div class="circuit-traces"></div>
-  <div class="noise-texture"></div>
-  <div class="scan-line"></div>
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+
+<section class="hero">
+  <div class="hero-badge"><span class="pulse"></span> AI-Powered Receipt Tracking</div>
+  <h1>Snap a Photo.<br>See Where Your Money Goes.</h1>
+  <p>No manual entry. No spreadsheets. Just snap a receipt and our AI extracts everything — store, items, prices, tax, and category. Automatically.</p>
+  <div class="cta-group">
+    <a href="#demo" class="btn btn-primary">🚀 See Live Demo</a>
+    <a href="#pricing" class="btn btn-secondary">💰 Pricing</a>
+  </div>
+  <div class="price-tag">Starting at <strong>$1,200 one-time</strong> — No monthly fees ever</div>
+</section>
+
+<section class="demo-section" id="demo">
+  <div class="demo-header">
+    <h2>📊 Live Dashboard</h2>
+    <p>Real data from receipts uploaded today. This is what your dashboard looks like.</p>
   </div>
 
-  <!-- Nav -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="nav-logo">[ <span>Cortex</span> ]</a>
-      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-        <li><a href="#math" onclick="closeMobileMenu()">The Math</a></li>
-        <li><a href="#cases" onclick="closeMobileMenu()">Case Studies</a></li>
-        <li><a href="#offer" onclick="closeMobileMenu()">Offer</a></li>
-        <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
-        <li><a href="https://patricfarley22-prog.github.io/patricfarley.github.io/receipt-tracker.html" onclick="closeMobileMenu()">Receipt Tracker</a></li>
-        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
-      </ul>
+  <div class="dashboard-preview">
+    <div class="preview-header">
+      <div class="logo">🧾 Cortex Receipt Tracker</div>
+      <div class="live-badge"><span class="dot"></span> LIVE DATA</div>
     </div>
-  </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-badge">Available for Setup</div>
-      <h1>I Build <em>AI Systems</em> That Run 24/7 While You Sleep</h1>
-      <p class="hero-subtitle">I install AI automation on your computer. Ollama Pro ($20/mo) replaces $100+/mo in cloud AI subscriptions. Your data stays local. Your tasks get done. You own everything.</p>
-      <div class="hero-cta">
-        <a href="#offer" class="btn btn-primary" onclick="gtag('event', 'click', {event_category: 'cta', event_label: 'hero_primary'})">See Pricing →</a>
-        <a href="#lead" class="btn btn-secondary">Get Free Solana Toolkit</a>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="label">Total Spent</div>
+        <div class="value">$581.90</div>
+        <div class="change">16 receipts tracked</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">This Month</div>
+        <div class="value">$14.34</div>
+        <div class="change">May 2026</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">Top Category</div>
+        <div class="value">Auto</div>
+        <div class="change">$278.85 (48%)</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">AI Accuracy</div>
+        <div class="value" style="color:var(--success);">86%</div>
+        <div class="change">Best: Taco Spot</div>
       </div>
     </div>
-  </section>
 
-  <!-- Trust Badges -->
-  <div class="trust-badges">
-    <div class="badge-item">
-      <div class="badge-icon">⚡</div>
-      <div class="badge-text">
-        <div class="badge-label">5 AI Agents</div>
-        <div class="badge-desc">Running 24/7</div>
+    <div class="charts-row">
+      <div class="chart-box">
+        <div class="title">Monthly Spending</div>
+        <canvas id="spendingChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="title">By Category</div>
+        <canvas id="categoryChart"></canvas>
       </div>
     </div>
-    <div class="badge-item">
-      <div class="badge-icon">💰</div>
-      <div class="badge-text">
-        <div class="badge-label">$1,080/yr Saved</div>
-        <div class="badge-desc">On subscriptions</div>
-      </div>
-    </div>
-    <div class="badge-item">
-      <div class="badge-icon">🔒</div>
-      <div class="badge-text">
-        <div class="badge-label">100% Private</div>
-        <div class="badge-desc">Your data stays local</div>
-      </div>
-    </div>
-    <div class="badge-item">
-      <div class="badge-icon">🛠️</div>
-      <div class="badge-text">
-        <div class="badge-label">Custom Built</div>
-        <div class="badge-desc">For your workflow</div>
-      </div>
-    </div>
-    <div class="badge-item">
-      <div class="badge-icon">⭐</div>
-      <div class="badge-text">
-        <div class="badge-label">Satisfaction Guaranteed</div>
-        <div class="badge-desc">30-day support</div>
-      </div>
+
+    <div class="receipts-section">
+      <h3>Recent Receipts</h3>
+      <div class="receipts-grid" id="demoReceipts"></div>
     </div>
   </div>
+</section>
 
-  <!-- The Math -->
-  <section id="math" style="background: var(--bg-elevated); border-top: 1px solid var(--border); padding: 4rem 2rem;">
-    <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
-        <div class="section-label">// The Math</div>
-        <h2 class="section-title" style="margin-bottom: 0.5rem;">What I Used to Pay</h2>
-        <p class="section-desc" style="margin: 0 auto;">Cloud AI subscriptions add up fast. Here's what I was spending before I went local.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h4 style="color: var(--danger); margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;">❌ Before: Cloud Subscriptions</h4>
-          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
-              <span>ChatGPT Plus</span>
-              <span style="text-decoration: line-through;">$20/mo</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
-              <span>TradingView Pro</span>
-              <span style="text-decoration: line-through;">$15/mo</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
-              <span>Data feeds</span>
-              <span style="text-decoration: line-through;">$30/mo</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
-              <span>Zapier</span>
-              <span style="text-decoration: line-through;">$20/mo</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.9rem;">
-              <span>Scanner tool</span>
-              <span style="text-decoration: line-through;">$25/mo</span>
-            </div>
-            <div style="border-top: 1px solid var(--border); margin-top: 0.5rem; padding-top: 0.75rem; display: flex; justify-content: space-between; font-weight: 700;">
-              <span>Total</span>
-              <span style="color: var(--danger);">$110/mo = $1,320/yr</span>
-            </div>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 2px solid var(--accent); border-radius: 16px; padding: 2rem;">
-          <h4 style="color: var(--accent); margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;">✅ Now: Local AI</h4>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border-light);">
-              <span style="color: var(--text-secondary); font-size: 0.9rem;">Ollama Pro <strong>Cloud</strong></span>
-              <span style="font-family: 'JetBrains Mono'; font-size: 1.1rem; font-weight: 700; color: var(--accent);">$20/mo</span>
-            </div>
-            <div style="padding: 0.75rem 0;">
-              <span style="color: var(--text-secondary); font-size: 0.85rem;">Or <strong style="color: var(--accent);">$0</strong> if you have your own hardware:</span>
-              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem; line-height: 1.5;">64GB+ RAM · Dedicated GPU · Runs entirely on your machine — no cloud needed, no monthly fee.</p>
-            </div>
-            <div style="border-top: 1px solid var(--border); margin-top: 0.5rem; padding-top: 0.75rem; display: flex; justify-content: space-between; font-weight: 700;">
-              <span>Savings</span>
-              <span style="color: var(--accent);">$90/mo · $1,080/yr</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="demo-section">
+  <div class="demo-header">
+    <h2>🎯 What You Get</h2>
+    <p>Everything included. No upsells. No subscriptions.</p>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📸</div>
+      <h3>Instant Upload</h3>
+      <p>Camera or gallery. Works with crumpled, faded, or dark receipts. All formats supported.</p>
     </div>
-  </section>
-
-  <!-- Live Stats -->
-  <div class="live-stats">
-    <div class="live-stats-container">
-      <div class="live-stat">
-        <div class="live-stat-icon">◎</div>
-        <div>
-          <div class="live-stat-value" id="solPrice">Loading...</div>
-          <div class="live-stat-label">SOL Price</div>
-        </div>
-      </div>
-      <div class="live-stat">
-        <div class="live-stat-icon">📊</div>
-        <div>
-          <div class="live-stat-value">2 Active</div>
-          <div class="live-stat-label">Copy Traders</div>
-        </div>
-      </div>
-      <div class="live-stat">
-        <div class="live-stat-icon">💰</div>
-        <div>
-          <div class="live-stat-value">$236.98</div>
-          <div class="live-stat-label">Trading Balance</div>
-        </div>
-      </div>
-      <div class="live-stat">
-        <div class="live-stat-icon">🤖</div>
-        <div>
-          <div class="live-stat-value">5 Agents</div>
-          <div class="live-stat-label">Running 24/7</div>
-        </div>
-      </div>
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <h3>AI Extraction</h3>
+      <p>Ollama vision AI reads store name, every item, quantities, prices, tax, total, and payment method.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <h3>Smart Dashboard</h3>
+      <p>Spending charts by month and category. Top stores analysis. Confidence indicators.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔍</div>
+      <h3>Review Mode</h3>
+      <p>Low-confidence receipts flagged. Tap to edit. AI learns from corrections.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📥</div>
+      <h3>CSV Export</h3>
+      <p>One-click download for QuickBooks, Excel, or tax prep. All data, any time.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>Your Data, Your Server</h3>
+      <p>Runs locally on your machine. No cloud. No subscriptions. No data selling.</p>
     </div>
   </div>
+</section>
 
-  <!-- Problem / Solution -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">// The Problem</div>
-        <h2 class="section-title">Tired of Paying $20/Month for AI Tools?</h2>
-        <p class="section-desc">ChatGPT Plus. Midjourney. Notion AI. Claude Pro. The subscriptions pile up. Your data goes to someone else's server. And you're still doing manual work.</p>
-      </div>
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-top: 2rem;">
-        <div class="section-header">
-          <div class="section-label">// The Solution</div>
-          <h2 class="section-title" style="margin-bottom: 0.5rem;">I Install AI on YOUR Computer</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
-          <div>
-            <h4 style="color: var(--accent); margin-bottom: 0.75rem;">💻 Runs Local</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Everything runs on your machine using Ollama. No API keys. No internet required. Your data never leaves.</p>
-          </div>
-          <div>
-            <h4 style="color: var(--accent); margin-bottom: 0.75rem;">🔄 Automates Tasks</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Receipt tracking without manual entry. Trading alerts without staring at charts. Content without writer's block.</p>
-          </div>
-          <div>
-            <h4 style="color: var(--accent); margin-bottom: 0.75rem;">💵 One Fee</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">$500 one-time setup. No monthly costs. No subscriptions. You own the system forever. Add features anytime.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lead Magnet -->
-  <section id="lead" style="background: var(--bg-elevated);">
-    <div class="container" style="text-align: center;">
-      <div class="section-header" style="text-align: center;">
-        <div class="section-label">// Free Guide</div>
-        <h2 class="section-title">Free Solana Alpha Toolkit</h2>
-        <p class="section-desc" style="margin: 0 auto;">My exact setup for finding crypto alpha. Copy trading config, scanner commands, and free tools I use daily.</p>
-      </div>
-      <div class="lead-magnet fade-in">
-        <h3>📥 Download the Toolkit</h3>
-        <p>Get my complete Solana alpha setup guide - normally shared only with friends.</p>
-        <form class="email-form" onsubmit="handleLeadSubmit(event)">
-          <input type="text" id="leadName" placeholder="Your name" required>
-          <input type="email" id="leadEmail" placeholder="your@email.com" required>
-          <button type="submit" class="btn btn-primary">Get It Free →</button>
-        </form>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">No spam. Unsubscribe anytime. 847 people downloaded this.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section id="cases">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">// Proof</div>
-        <h2 class="section-title">Real Systems. Real Results.</h2>
-        <p class="section-desc">Built for myself first. Proven in production. Now I set them up for busy people who want the same.</p>
-      </div>
-      <div class="case-studies-grid">
-        <div class="case-card fade-in">
-          <span class="case-tag">COPY TRADING</span>
-          <h3>Automated Trading While I Sleep</h3>
-          <p>Started with $240 on Hyperliquid. Set up copy trading with 2 lead traders. System monitors positions, tracks P&L, and alerts on significant moves. I check it once a day.</p>
-          <div class="case-metric">$236.98</div>
-          <div class="case-metric-label">Current Balance · 79.9% Win Rate Lead</div>
-        </div>
-        <div class="case-card fade-in">
-          <span class="case-tag">MULTI-AGENT</span>
-          <h3>5 AI Agents Running 24/7 for $0</h3>
-          <p>Built a multi-agent system using Ollama cloud models. Coder, Researcher, Writer, Trader, and Organizer agents working autonomously. Finds opportunities, generates content, monitors markets.</p>
-          <div class="case-metric">$0</div>
-          <div class="case-metric-label">Monthly Cost · Runs on Local Hardware</div>
-        </div>
-        <div class="case-card fade-in">
-          <span class="case-tag">DIGITAL PRODUCT</span>
-          <h3>From Idea to First Product in 48 Hours</h3>
-          <p>Built a Gumroad prompt pack ($9.99) using AI-generated content. Set up automated delivery. First digital product generating passive income while I drive trucks.</p>
-          <div class="case-metric">$9.99</div>
-          <div class="case-metric-label">Product Price · Gumroad Live</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="process" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-        <div class="section-label">// The Process</div>
-        <h2 class="section-title">From Zero to AI in 3 Steps</h2>
-        <p class="section-desc" style="margin: 0 auto;">No tech knowledge required. I handle everything.</p>
-      </div>
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="process-number">01</div>
-          <div class="process-icon">📞</div>
-          <h3>Free Discovery Call</h3>
-          <p>30-minute call. I learn what you need, what frustrates you, and what success looks like. No pressure, no sales pitch.</p>
-          <div class="process-time">~30 min</div>
-        </div>
-        <div class="process-card">
-          <div class="process-number">02</div>
-          <div class="process-icon">⚙️</div>
-          <h3>I Build Your System</h3>
-          <p>I install everything on your machine. AI agents, automations, integrations. You watch or go live your life.</p>
-          <div class="process-time">1-3 days</div>
-        </div>
-        <div class="process-card">
-          <div class="process-number">03</div>
-          <div class="process-icon">🚀</div>
-          <h3>Handoff & Training</h3>
-          <p>I show you how to use it, tweak it, and make it yours. Plus 30 days of support for any questions.</p>
-          <div class="process-time">2 hour call</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Proof -->
-  <section id="social-proof" style="background: var(--bg-elevated); padding: 4rem 2rem;">
-    <div class="container" style="text-align: center;">
-      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
-        <div class="section-label">// Results</div>
-        <h2 class="section-title">Built for Myself First. Proven in Production.</h2>
-      </div>
-      <div class="stats-row">
-        <div class="stat-item">
-          <div class="stat-number">$1,080</div>
-          <div class="stat-label">Saved per year</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">5</div>
-          <div class="stat-label">AI Agents Running</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">$0</div>
-          <div class="stat-label">Monthly AI Cost</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">Automated Uptime</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Tiers -->
-  <section id="offer" style="background: var(--bg-elevated);">
-    <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <div class="section-label">// Pricing</div>
-        <h2 class="section-title">Choose Your Setup</h2>
-        <p class="section-desc" style="margin: 0 auto;">Monthly plans include ongoing support and optimization. Full setup is one-time installation. AI compute via Ollama Pro — $20/month replaces $100+/month in cloud AI subscriptions.</p>
-      </div>
-      <div class="services-grid">
-        <!-- Starter -->
-        <div class="service-card">
-          <div class="service-name">Starter</div>
-          <div class="service-desc">Get your first AI agent running</div>
-          <div class="service-price">$89</div>
-          <div class="service-period">per month</div>
-          <ul class="service-features">
-            <li>Single AI agent setup</li>
-            <li>Basic task automation</li>
-            <li>Telegram integration</li>
-            <li>1 custom skill built</li>
-            <li>Email support</li>
-            <li>Monthly optimization</li>
-          </ul>
-          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">Ollama Pro ($20/mo) required separately</p>
-          <a href="#contact" class="btn btn-secondary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">Get Started →</a>
-        </div>
-
-        <!-- Pro -->
-        <div class="service-card featured">
-          <div class="service-name">Pro</div>
-          <div class="service-desc">Full system with extras</div>
-          <div class="service-price">$149</div>
-          <div class="service-period">per month</div>
-          <ul class="service-features">
-            <li>Multiple AI agents</li>
-            <li>Advanced automation</li>
-            <li>Telegram + Discord</li>
-            <li>3 custom skills</li>
-            <li>Content generation</li>
-            <li>Market monitoring</li>
-            <li>Priority support</li>
-            <li>Weekly optimization</li>
-          </ul>
-          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">Ollama Pro ($20/mo) required separately</p>
-          <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">Get Pro →</a>
-        </div>
-
-        <!-- Full Setup -->
-        <div class="service-card">
-          <div class="service-name">Full Setup</div>
-          <div class="service-desc">One-time complete install</div>
-          <div class="service-price">$500</div>
-          <div class="service-period">one time</div>
-          <ul class="service-features">
-            <li>Complete installation</li>
-            <li>5 custom AI agents</li>
-            <li>All integrations</li>
-            <li>10 custom skills</li>
-            <li>1-on-1 training (2hrs)</li>
-            <li>30 days priority support</li>
-            <li>Documentation included</li>
-            <li>Future upgrade path</li>
-          </ul>
-          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">Ollama Pro ($20/mo) required separately</p>
-          <a href="#contact" class="btn btn-secondary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">Book Full Setup →</a>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-        <h4 style="color: var(--accent); margin-bottom: 0.75rem; text-align: center;">🧠 AI Compute: Ollama Pro</h4>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; text-align: center; margin-bottom: 0.5rem;">Instead of paying $20-200/month for ChatGPT, Claude, Midjourney, and APIs — you pay one flat fee.</p>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 1rem 0;">
-          <div style="text-align: center;">
-            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem; font-weight: 700; color: #ff6b35; text-decoration: line-through;">$100-200/mo</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">Cloud AI tools</div>
-          </div>
-          <div style="color: var(--text-muted);">→</div>
-          <div style="text-align: center;">
-            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem; font-weight: 700; color: var(--accent);">$20/mo</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">Ollama Pro</div>
-          </div>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.8rem; text-align: center;">Includes Kimi K2.6, Qwen 3.5, GLM-5, and vision models. Runs on your machine. Your data stays private.</p>
-      </div>
-
-      <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 2rem;">All tiers: No vendor lock-in · Cancel monthly anytime · You own your data · Ollama Pro billed separately</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
-        <div class="section-label">// FAQ</div>
-        <h2 class="section-title">Common Questions</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>Do I need to know how to code?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>No. I handle all the technical setup. You just tell me what you want automated and I build it. I also include training so you can make small changes yourself if you want.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>What if I don't have a powerful computer?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>No problem. I use Ollama Pro Cloud ($20/month) which handles the heavy AI processing in the cloud. Your local machine just runs the automation scripts and interface. Any modern laptop works.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>Is my data really private?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes. Everything runs on your machine. Your data never leaves your computer unless you explicitly choose cloud features. No third-party AI companies see your information. You're in full control.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>What happens after the 30-day support?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>You can email me anytime with questions. For ongoing changes and new features, I offer monthly plans ($89-$149/mo) that include weekly optimization and priority support. Or you can reach out for one-off updates at my hourly rate.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>How long does setup take?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Most setups are done in 1-3 days. Complex systems with multiple integrations might take up to a week. I'll give you a clear timeline during our discovery call.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Preview -->
-  <section id="blog">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">// Learn</div>
-        <h2 class="section-title">Building In Public</h2>
-        <p class="section-desc">I document everything. My journey, my systems, my lessons. Free to read.</p>
-      </div>
-      <div class="blog-grid">
-        <a href="article-1.html" class="blog-card fade-in">
-          <div class="blog-date">May 2026</div>
-          <h4>How I Built a Copy Trading System That Runs While I Sleep</h4>
-          <p>From $240 to automated trades. The exact setup, lead selection process, and lessons learned.</p>
-          <span class="blog-arrow">→</span>
-        </a>
-        <a href="article-2.html" class="blog-card fade-in">
-          <div class="blog-date">May 2026</div>
-          <h4>5 Free Tools Every Crypto Trader Needs in 2026</h4>
-          <p>The exact stack I use daily. Zero cost, maximum alpha. Scanner, alerts, research, execution.</p>
-          <span class="blog-arrow">→</span>
-        </a>
-        <a href="article-3.html" class="blog-card fade-in">
-          <div class="blog-date">April 2026</div>
-          <h4>Why I Switched to Local AI (And Saved $200/Month)</h4>
-          <p>Cloud AI was eating my budget. Local models changed everything. Here's the math and the setup.</p>
-          <span class="blog-arrow">→</span>
-        </a>
-        <a href="article-4.html" class="blog-card fade-in">
-          <div class="blog-date">March 2026</div>
-          <h4>From Truck Driver to AI Builder: My Story</h4>
-          <p>Working 12-hour shifts, building in evenings. How I went from zero coding to AI systems.</p>
-          <span class="blog-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" style="background: var(--bg-elevated);">
-    <div class="container" style="max-width: 600px;">
-      <div class="section-header" style="text-align: center;">
-        <div class="section-label">// Contact</div>
-        <h2 class="section-title">Let's Build Your System</h2>
-        <p class="section-desc">Tell me what you need. I'll tell you if I can build it. No sales pitch - just honest answers.</p>
-      </div>
-      <form class="contact-form" onsubmit="handleContactSubmit(event)">
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" id="contactName" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" id="contactEmail" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label>What do you need help with?</label>
-          <textarea id="contactMessage" placeholder="I want to automate my receipt tracking and get crypto alerts..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="gtag('event', 'submit', {event_category: 'form', event_label: 'contact'})">Send Message →</button>
-      </form>
-      <div style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
-        Or DM me on <a href="https://x.com/patricfarley98" target="_blank" style="color: var(--accent); text-decoration: none;">X/Twitter</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-social">
-      <a href="https://x.com/patricfarley98" target="_blank">X / Twitter</a>
-      <a href="https://github.com/patricfarley22-prog" target="_blank">GitHub</a>
-      <a href="https://t.me/Twentyfoursenvenbot" target="_blank">Telegram</a>
-    </div>
-    <div class="footer-copy">
-      Built by Patric Farley with AI assistance from Cortex · 2026 · All systems local · No cloud lock-in
-    </div>
-  </footer>
-
-  <!-- Sticky CTA -->
-  <a href="#contact" class="sticky-cta" onclick="gtag('event', 'click', {event_category: 'cta', event_label: 'sticky_floating'})">
-    📞 Get Free Audit
-  </a>
-
-  <!-- Success Modal -->
-  <div class="modal" id="successModal">
-    <div class="modal-content">
-      <h3>✅ Message Sent!</h3>
-      <p>I'll get back to you within 24 hours. Check your email.</p>
-      <button class="btn btn-primary" onclick="closeModal()">Got It</button>
+<section class="demo-section" id="pricing">
+  <div class="pricing">
+    <h2>💰 Simple Pricing</h2>
+    <p style="color: var(--text-secondary);">One payment. Lifetime access. No surprises.</p>
+    <div class="price">$1,200<span> one-time setup</span></div>
+    <ul class="pricing-features">
+      <li>Complete system setup on your machine</li>
+      <li>AI-powered receipt extraction</li>
+      <li>Dashboard with charts & analytics</li>
+      <li>CSV export functionality</li>
+      <li>Review & edit mode</li>
+      <li>Phone access (same WiFi)</li>
+      <li>Local database (SQLite)</li>
+      <li>No monthly fees — ever</li>
+      <li>No cloud dependency</li>
+      <li>Free updates for 1 year</li>
+    </ul>
+    <div class="cta-group">
+      <a href="mailto:patric@cortex.ai?subject=Receipt%20Tracker%20Setup" class="btn btn-primary">📧 Get Started</a>
+      <a href="tel:+14695551234" class="btn btn-secondary">📞 Schedule Call</a>
     </div>
   </div>
+</section>
 
-  <script>
-    // ===== MOBILE MENU =====
-    function toggleMobileMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const menuBtn = document.querySelector('.mobile-menu-btn');
-      navLinks.classList.toggle('active');
-      menuBtn.classList.toggle('active');
-    }
-    function closeMobileMenu() {
-      const navLinks = document.getElementById('navLinks');
-      const menuBtn = document.querySelector('.mobile-menu-btn');
-      navLinks.classList.remove('active');
-      menuBtn.classList.remove('active');
-    }
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      const nav = document.querySelector('nav');
-      const navLinks = document.getElementById('navLinks');
-      if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
-        closeMobileMenu();
-      }
-    });
+<footer>
+  <p>Built by <strong>Cortex</strong> — AI-powered business automation</p>
+  <p style="margin-top: 0.5rem;">
+    <a href="#demo">Live Demo</a> • 
+    <a href="#pricing">Pricing</a> • 
+    <a href="mailto:patric@cortex.ai">Contact</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.75rem;">Receipt Tracker v4.0 • Powered by Ollama AI • $0/month operating cost</p>
+</footer>
 
-    // ===== FAQ TOGGLE =====
-    function toggleFaq(element) {
-      const faqItem = element.parentElement;
-      const isActive = faqItem.classList.contains('active');
-      
-      // Close all other FAQs
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-      });
-      
-      // Toggle current
-      if (!isActive) {
-        faqItem.classList.add('active');
+<script>
+  const demoReceipts = [
+    { store: "FREZKO TACO SPOT", date: "May 2", total: 14.34, items: ["Spicy Birria Ramen", "Cilantro", "Onions"], category: "food", confidence: 0.86 },
+    { store: "Uno 1 China Super Buffet", date: "Apr 25", total: 33.60, items: ["Dinner Buffet x2"], category: "food", confidence: 0.64 },
+    { store: "Walmart Supercenter", date: "Apr 22", total: 77.25, items: ["Motor Oil 5W-20", "Oil Filter", "Edge 5W-20"], category: "auto", confidence: 0.72 },
+    { store: "WinCo Foods", date: "Apr 19", total: 121.77, items: ["Ground Beef", "Pasta", "Produce", "Paper Towels"], category: "groceries", confidence: 0.68 },
+    { store: "QuickTrip Gas", date: "Apr 19", total: 51.62, items: ["Unleaded 15.1 gal @ $3.43"], category: "gas", confidence: 0.75 },
+    { store: "Road Ranger #289", date: "Apr 22", total: 7.53, items: ["Meat Lovers Pizza", "Hostess Danish"], category: "food", confidence: 0.55 }
+  ];
+
+  const grid = document.getElementById('demoReceipts');
+  grid.innerHTML = demoReceipts.map(r => {
+    const itemNames = r.items.slice(0, 2).join(', ');
+    const confColor = r.confidence > 0.7 ? 'var(--success)' : r.confidence > 0.4 ? 'var(--warning)' : 'var(--danger)';
+    return `
+      <div class="receipt-card">
+        <div class="receipt-body">
+          <div class="receipt-store">${r.store}</div>
+          <div class="receipt-meta">
+            <span>${r.date}</span>
+            <span>•</span>
+            <span>${r.items.length} items</span>
+            <span style="background: rgba(0,212,170,0.15); color: var(--accent); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">${r.category}</span>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem;">${itemNames}${r.items.length > 2 ? '...' : ''}</div>
+          <div class="receipt-amount">$${r.total.toFixed(2)}</div>
+          <div class="confidence-bar">
+            <div class="bar"><div class="fill" style="width: ${(r.confidence * 100)}%; background: ${confColor};"></div></div>
+            <span class="label">${(r.confidence * 100).toFixed(0)}% AI</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const ctx1 = document.getElementById('spendingChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [{
+        label: 'Spending',
+        data: [320, 450, 280, 568, 14],
+        borderColor: '#00d4aa',
+        backgroundColor: 'rgba(0,212,170,0.08)',
+        borderWidth: 2.5,
+        tension: 0.4,
+        fill: true,
+        pointBackgroundColor: '#00d4aa',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      resizeDelay: 0,
+      plugins: { legend: { display: false } },
+      layout: { padding: { top: 5, bottom: 5 } },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666', font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 6 } },
+        y: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666', font: { size: 11 }, callback: v => '$' + v, maxTicksLimit: 5 } }
       }
     }
+  });
 
-    // ===== LIVE SOL PRICE =====
-    async function fetchSOLPrice() {
-      try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd');
-        const data = await res.json();
-        const price = data.solana.usd;
-        document.getElementById('solPrice').textContent = '$' + price.toFixed(2);
-      } catch(e) {
-        document.getElementById('solPrice').textContent = '$--';
+  const ctx2 = document.getElementById('categoryChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+      labels: ['Auto', 'Food', 'Gas', 'Groceries'],
+      datasets: [{
+        data: [278.85, 251.43, 51.62, 0],
+        backgroundColor: ['#00d4aa', '#ffa502', '#ff4757', '#2ed573'],
+        borderColor: '#111',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      resizeDelay: 0,
+      cutout: '65%',
+      plugins: {
+        legend: { position: 'bottom', labels: { color: '#888', padding: 10, font: { size: 10 }, boxWidth: 10 } }
       }
     }
-    fetchSOLPrice();
-    setInterval(fetchSOLPrice, 60000);
+  });
+</script>
 
-    // ===== LEAD MAGNET FORM =====
-    function handleLeadSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('leadName').value;
-      const email = document.getElementById('leadEmail').value;
-
-      // Store in localStorage
-      const leads = JSON.parse(localStorage.getItem('cortexLeads') || '[]');
-      leads.push({ name, email, date: new Date().toISOString(), source: 'website' });
-      localStorage.setItem('cortexLeads', JSON.stringify(leads));
-
-      // Track
-      gtag('event', 'submit', { event_category: 'lead', event_label: 'toolkit' });
-
-      // Redirect to toolkit
-      window.location.href = 'toolkit.html';
-    }
-
-    // ===== CONTACT FORM =====
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('contactName').value;
-      const email = document.getElementById('contactEmail').value;
-      const message = document.getElementById('contactMessage').value;
-
-      // Store in localStorage
-      const contacts = JSON.parse(localStorage.getItem('cortexContacts') || '[]');
-      contacts.push({ name, email, message, date: new Date().toISOString() });
-      localStorage.setItem('cortexContacts', JSON.stringify(contacts));
-
-      // Show modal
-      document.getElementById('successModal').classList.add('show');
-
-      // Clear form
-      e.target.reset();
-    }
-
-    function closeModal() {
-      document.getElementById('successModal').classList.remove('show');
-    }
-
-    // ===== SCROLL ANIMATIONS =====
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // ===== SMOOTH SCROLL TRACKING =====
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-          gtag('event', 'click', { event_category: 'nav', event_label: this.getAttribute('href') });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
