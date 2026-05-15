@@ -1,0 +1,484 @@
+{
+  "timestamp": "2026-05-15T17:42:08.801962",
+  "backends": {
+    "pennylane": true,
+    "qiskit": true,
+    "dwave": true
+  },
+  "count": 11,
+  "results": [
+    {
+      "symbol": "House",
+      "name": "Housecoin",
+      "ca": "DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump",
+      "market_cap": 3338250,
+      "price": 0.003342,
+      "change_24h": -14.57,
+      "change_7d": 0.0,
+      "volume_24h": 92872,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.7115207461156471,
+          "score": 0.5288018652891178,
+          "trend": 0.995522578902454,
+          "volume_conf": 0.9961836818186909,
+          "risk": -0.3358746000111921,
+          "stability": -0.344302995354118
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.7034374999999999,
+          "score": 0.50859375,
+          "trend": 0.955078125,
+          "volume_conf": 0.99609375,
+          "risk": -0.294921875,
+          "stability": -0.34375
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.346,
+      "consensus_confidence": 0.638,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "GIGA",
+      "name": "GIGACHAD",
+      "ca": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9",
+      "market_cap": 43700000,
+      "price": 0.00455,
+      "change_24h": -5.03,
+      "change_7d": 0.0,
+      "volume_24h": 1414240,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.8276313296039832,
+          "score": 0.819078324009958,
+          "trend": 0.9914277201134828,
+          "volume_conf": 0.9490938485487975,
+          "risk": -0.8014372712435777,
+          "stability": 0.49635636635999264
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.8162890625,
+          "score": 0.7907226562499999,
+          "trend": 0.962890625,
+          "volume_conf": 0.8671875,
+          "risk": -0.841796875,
+          "stability": 0.466796875
+        },
+        "dwave": {
+          "signal": "SELL",
+          "confidence": 0.74,
+          "score": -0.6000000000000001,
+          "trend": -1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.337,
+      "consensus_confidence": 0.795,
+      "agreement": "2B/1S/0H"
+    },
+    {
+      "symbol": "OMEGAX",
+      "name": "OmegaX",
+      "ca": "4Aar9R14YMbEie6yh8WcH1gWXrBtfucoFjw6SpjXpump",
+      "market_cap": 360000,
+      "price": 0.00036,
+      "change_24h": -1.73,
+      "change_7d": 0.0,
+      "volume_24h": 3000,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.6829337230305257,
+          "score": 0.4573343075763143,
+          "trend": 0.99999378422981,
+          "volume_conf": 0.8818577983412069,
+          "risk": -0.9071432165847592,
+          "stability": -0.9782276823795287
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.6899609375,
+          "score": 0.47490234375000007,
+          "trend": 0.94140625,
+          "volume_conf": 0.994140625,
+          "risk": -0.92578125,
+          "stability": -0.96484375
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.311,
+      "consensus_confidence": 0.624,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "BITTY",
+      "name": "The Bitcoin Mascot",
+      "ca": "dTzEP9JU2NRDPuWtM32gaVKip2fTHBqjheU1APBpump",
+      "market_cap": 933910,
+      "price": 0.0009345,
+      "change_24h": -2.03,
+      "change_7d": 0.0,
+      "volume_24h": 19556,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.6838175451026837,
+          "score": 0.4595438627567092,
+          "trend": 0.898452426415394,
+          "volume_conf": 0.9235976627358827,
+          "risk": -0.950362060983524,
+          "stability": -0.9238547721943378
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.6862109375,
+          "score": 0.46552734374999993,
+          "trend": 0.94921875,
+          "volume_conf": 0.9140625,
+          "risk": -0.9453125,
+          "stability": -0.947265625
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.308,
+      "consensus_confidence": 0.623,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "HACHI",
+      "name": "Hachi",
+      "ca": "AsrtqZiNYt3c6nNCtkj7abUrVc8APsFF37Wffq45rkVh",
+      "market_cap": 22000,
+      "price": 2.2e-05,
+      "change_24h": -2.9,
+      "change_7d": -5.0,
+      "volume_24h": 500,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.6787553302719196,
+          "score": 0.4468883256797989,
+          "trend": 0.8797000323143903,
+          "volume_conf": 0.9219715994340602,
+          "risk": -0.8713251719509942,
+          "stability": -0.8871184730529283
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.688125,
+          "score": 0.4703125,
+          "trend": 0.9453125,
+          "volume_conf": 0.947265625,
+          "risk": -0.77734375,
+          "stability": -0.822265625
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.306,
+      "consensus_confidence": 0.622,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "PENGO",
+      "name": "Pengo",
+      "ca": "F2k82EcxLtzekq1bfoGVdgp6EXZ5dLT1jE7g3LvQpump",
+      "market_cap": 590000,
+      "price": 0.00059,
+      "change_24h": -2.38,
+      "change_7d": -5.0,
+      "volume_24h": 12000,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.6868946771596258,
+          "score": 0.46723669289906467,
+          "trend": 0.916192170424577,
+          "volume_conf": 0.9212576714370937,
+          "risk": -0.9169947324322697,
+          "stability": -0.8853372902961434
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.6787890625,
+          "score": 0.44697265625000004,
+          "trend": 0.9375,
+          "volume_conf": 0.90234375,
+          "risk": -0.826171875,
+          "stability": -0.900390625
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.305,
+      "consensus_confidence": 0.622,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "DOWGE",
+      "name": "Dowge",
+      "ca": "DQnkBM4eYYMnVE8Qy2K3BB7uts1fh2EwBVktEz6jpump",
+      "market_cap": 3200000,
+      "price": 0.00321,
+      "change_24h": -5.34,
+      "change_7d": -8.0,
+      "volume_24h": 22000,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.6739422628215421,
+          "score": 0.4348556570538553,
+          "trend": 0.8493201147703747,
+          "volume_conf": 0.8524036292539076,
+          "risk": -0.7426363702401849,
+          "stability": -0.7262742349550837
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.6632421875,
+          "score": 0.40810546875,
+          "trend": 0.794921875,
+          "volume_conf": 0.8125,
+          "risk": -0.708984375,
+          "stability": -0.701171875
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.281,
+      "consensus_confidence": 0.612,
+      "agreement": "2B/0S/1H"
+    },
+    {
+      "symbol": "ZEREBRO",
+      "name": "zerebro",
+      "ca": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+      "market_cap": 28471555,
+      "price": 0.02847,
+      "change_24h": -1.98,
+      "change_7d": 0.0,
+      "volume_24h": 2990806,
+      "backends": {
+        "pennylane": {
+          "signal": "BUY",
+          "confidence": 0.770773528727708,
+          "score": 0.6769338218192699,
+          "trend": 0.9044303664364134,
+          "volume_conf": 0.8831234203956168,
+          "risk": -0.8697225841978611,
+          "stability": 0.04351735979947757
+        },
+        "qiskit": {
+          "signal": "BUY",
+          "confidence": 0.7831250000000001,
+          "score": 0.7078125,
+          "trend": 0.923828125,
+          "volume_conf": 0.939453125,
+          "risk": -0.908203125,
+          "stability": 0.056640625
+        },
+        "dwave": {
+          "signal": "SELL",
+          "confidence": 0.74,
+          "score": -0.6000000000000001,
+          "trend": -1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "BUY",
+      "consensus_score": 0.262,
+      "consensus_confidence": 0.765,
+      "agreement": "2B/1S/0H"
+    },
+    {
+      "symbol": "TOKABU",
+      "name": "Tokabu",
+      "ca": "H8xQ6poBjB9DTPMDTKWzWPrnxu4bDEhybxiouF8Ppump",
+      "market_cap": 2410000,
+      "price": 0.00241,
+      "change_24h": -15.49,
+      "change_7d": -20.0,
+      "volume_24h": 153000,
+      "backends": {
+        "pennylane": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.18171437589906825,
+          "trend": 0.359781042861265,
+          "volume_conf": 0.3171175377240782,
+          "risk": -0.1048187674398055,
+          "stability": -0.1058522995131676
+        },
+        "qiskit": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.20283203125,
+          "trend": 0.384765625,
+          "volume_conf": 0.37890625,
+          "risk": -0.107421875,
+          "stability": -0.115234375
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "HOLD",
+      "consensus_score": 0.128,
+      "consensus_confidence": 0.5,
+      "agreement": "0B/0S/3H"
+    },
+    {
+      "symbol": "WOBBLES",
+      "name": "Wobbles",
+      "ca": "9yZ5Ru8pbmJZ6Q2DKLCGXkaLNwkm83cnJ4QCw4PFpump",
+      "market_cap": 910000,
+      "price": 0.00091,
+      "change_24h": -19.49,
+      "change_7d": -25.0,
+      "volume_24h": 90000,
+      "backends": {
+        "pennylane": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.058351362490322876,
+          "trend": 0.1089690432951918,
+          "volume_conf": 0.10402921705224549,
+          "risk": -0.0074931163895337605,
+          "stability": -0.007381112156811143
+        },
+        "qiskit": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.063671875,
+          "trend": 0.126953125,
+          "volume_conf": 0.109375,
+          "risk": -0.025390625,
+          "stability": -0.02734375
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "HOLD",
+      "consensus_score": 0.041,
+      "consensus_confidence": 0.5,
+      "agreement": "0B/0S/3H"
+    },
+    {
+      "symbol": "TROLL",
+      "name": "Troll",
+      "ca": "5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2",
+      "market_cap": 5800000,
+      "price": 0.1157,
+      "change_24h": -13.27,
+      "change_7d": -20.0,
+      "volume_24h": 6340000,
+      "backends": {
+        "pennylane": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.03657547739310466,
+          "trend": 0.331625389484523,
+          "volume_conf": -0.26550509921899634,
+          "risk": 0.11781186308108083,
+          "stability": 0.10810603187485202
+        },
+        "qiskit": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.040917968750000006,
+          "trend": 0.35546875,
+          "volume_conf": -0.283203125,
+          "risk": 0.08203125,
+          "stability": 0.0859375
+        },
+        "dwave": {
+          "signal": "HOLD",
+          "confidence": 0.5,
+          "score": 0.0,
+          "trend": 1.0,
+          "volume_conf": -1.0,
+          "risk": -1.0,
+          "stability": -1.0
+        }
+      },
+      "consensus": "HOLD",
+      "consensus_score": 0.026,
+      "consensus_confidence": 0.5,
+      "agreement": "0B/0S/3H"
+    }
+  ]
+}

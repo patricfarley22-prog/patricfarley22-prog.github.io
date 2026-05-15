@@ -44,8 +44,10 @@ COINS = [
     {"symbol": "TOKABU", "name": "Tokabu", "market_cap": 2410000, "price": 0.00241, "change_24h": -15.49, "change_7d": -20.0, "volume_24h": 153000, "ca": "H8xQ6poBjB9DTPMDTKWzWPrnxu4bDEhybxiouF8Ppump"},
     {"symbol": "OMEGAX", "name": "OmegaX", "market_cap": 360000, "price": 0.00036, "change_24h": -1.73, "change_7d": 0.0, "volume_24h": 3000, "ca": "4Aar9R14YMbEie6yh8WcH1gWXrBtfucoFjw6SpjXpump"},
     {"symbol": "HACHI", "name": "Hachi", "market_cap": 22000, "price": 0.000022, "change_24h": -2.90, "change_7d": -5.0, "volume_24h": 500, "ca": "AsrtqZiNYt3c6nNCtkj7abUrVc8APsFF37Wffq45rkVh"},
-    {"symbol": "MARMUS", "name": "Chad Marmus", "market_cap": 3651, "price": 0.00000365, "change_24h": -90.1, "change_7d": 0.0, "volume_24h": 166136, "ca": "ANfTyWJada5fhKffEX6PeoB486uKCHmuHdm"},
-    {"symbol": "GIGA", "name": "GIGACHAD", "market_cap": 43700000, "price": 0.004550, "change_24h": -5.03, "change_7d": 0.0, "volume_24h": 1414240, "ca": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9"}
+    {"symbol": "GIGA", "name": "GIGACHAD", "market_cap": 43700000, "price": 0.004550, "change_24h": -5.03, "change_7d": 0.0, "volume_24h": 1414240, "ca": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9"},
+    {"symbol": "ZEREBRO", "name": "zerebro", "market_cap": 28471555, "price": 0.02847, "change_24h": -1.98, "change_7d": 0.0, "volume_24h": 2990806, "ca": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn"},
+    {"symbol": "House", "name": "Housecoin", "market_cap": 3338250, "price": 0.003342, "change_24h": -14.57, "change_7d": 0.0, "volume_24h": 92872, "ca": "DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump"},
+    {"symbol": "BITTY", "name": "The Bitcoin Mascot", "market_cap": 933910, "price": 0.0009345, "change_24h": -2.03, "change_7d": 0.0, "volume_24h": 19556, "ca": "dTzEP9JU2NRDPuWtM32gaVKip2fTHBqjheU1APBpump"}
 ]
 
 class FullQuantumComparison:
