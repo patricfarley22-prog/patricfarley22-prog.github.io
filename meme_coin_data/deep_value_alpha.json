@@ -1,0 +1,156 @@
+{
+  "timestamp": "2026-05-15T18:55:04.702853",
+  "strategy": "Deep Value 20-100x",
+  "top_5": [
+    {
+      "symbol": "UP",
+      "name": "Superform",
+      "market_cap": 28460000,
+      "price": 0.148,
+      "ath": 2.0,
+      "ath_change": -92.6,
+      "change_24h": -12.8,
+      "change_7d": 0.0,
+      "volume_24h": 21500000,
+      "total_supply": 100000000,
+      "from_ath": 13.513513513513514,
+      "vol_ratio": 75.54462403373155,
+      "scores": {
+        "undervalued": 95,
+        "size": 65,
+        "recovery": 70,
+        "activity": 100,
+        "momentum": 75
+      },
+      "total_score": 79.75,
+      "quantum_confidence": 65.875,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.978,
+        -0.258,
+        0.208,
+        0.342
+      ]
+    },
+    {
+      "symbol": "CGPT",
+      "name": "ChainGPT",
+      "market_cap": 39710000,
+      "price": 0.04297,
+      "ath": 0.5,
+      "ath_change": -91.4,
+      "change_24h": 16.1,
+      "change_7d": 0.0,
+      "volume_24h": 38000000,
+      "total_supply": 1000000000,
+      "from_ath": 11.63602513381429,
+      "vol_ratio": 95.69377990430623,
+      "scores": {
+        "undervalued": 95,
+        "size": 65,
+        "recovery": 70,
+        "activity": 100,
+        "momentum": 90
+      },
+      "total_score": 81.25,
+      "quantum_confidence": 65.07499999999999,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.97,
+        -0.192,
+        0.17,
+        0.258
+      ]
+    },
+    {
+      "symbol": "DOGS",
+      "name": "Dogs",
+      "market_cap": 29930000,
+      "price": 5.8e-05,
+      "ath": 0.001,
+      "ath_change": -94.2,
+      "change_24h": -5.5,
+      "change_7d": 0.0,
+      "volume_24h": 19000000,
+      "total_supply": 1000000000,
+      "from_ath": 17.24137931034483,
+      "vol_ratio": 63.48145673237554,
+      "scores": {
+        "undervalued": 95,
+        "size": 65,
+        "recovery": 70,
+        "activity": 100,
+        "momentum": 75
+      },
+      "total_score": 79.75,
+      "quantum_confidence": 64.95,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.968,
+        -0.214,
+        0.16,
+        0.282
+      ]
+    },
+    {
+      "symbol": "BITTY",
+      "name": "The Bitcoin Mascot",
+      "market_cap": 933910,
+      "price": 0.00092,
+      "ath": 0.01,
+      "ath_change": -90.8,
+      "change_24h": -2.03,
+      "change_7d": 0.0,
+      "volume_24h": 19556,
+      "total_supply": 1000000000,
+      "from_ath": 10.869565217391305,
+      "vol_ratio": 2.0939919264168925,
+      "scores": {
+        "undervalued": 95,
+        "size": 100,
+        "recovery": 70,
+        "activity": 40,
+        "momentum": 75
+      },
+      "total_score": 82.5,
+      "quantum_confidence": 55.025,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.982,
+        -0.988,
+        0.35,
+        0.058
+      ]
+    },
+    {
+      "symbol": "DOWGE",
+      "name": "Dowge",
+      "market_cap": 3200000,
+      "price": 0.00321,
+      "ath": 0.025,
+      "ath_change": -87.2,
+      "change_24h": -5.34,
+      "change_7d": -8.0,
+      "volume_24h": 22000,
+      "total_supply": 1000000000,
+      "from_ath": 7.788161993769471,
+      "vol_ratio": 0.6875,
+      "scores": {
+        "undervalued": 95,
+        "size": 90,
+        "recovery": 60,
+        "activity": 40,
+        "momentum": 75
+      },
+      "total_score": 77.5,
+      "quantum_confidence": 54.074999999999996,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.974,
+        -0.886,
+        0.136,
+        0.102
+      ]
+    }
+  ]
+}
